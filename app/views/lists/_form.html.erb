@@ -1,0 +1,30 @@
+<%= render 'shared/errors', obj: @list %>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <%= form_for @list do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+         
+          <%= f.label :model %> 
+          <div class="wel">
+          <%= f.select :model, ['DELL', 'HP']%>
+          </div>
+          
+          <%= f.label :serial_no %>
+          <%= f.text_field :serial_no %>
+          
+          <%= f.label :asset_tag %>
+          <%= f.text_field :asset_tag %>
+        
+          <%= f.label :warranty %>
+          <%= f.number_field :warranty %>
+
+  
+          <%= f.label :date_of_purchase %>
+          <%= f.date_select :date_of_purchase, :order => [:day, :month, :year] %>
+          
+          <%= f.submit(@list.new_record? ? "Create Asset" : "Edit Asset", class: "btn btn-success") %>
+        <% end %>
+    </div>
+</div>

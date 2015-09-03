@@ -1,0 +1,35 @@
+<h1>Welcome to Monitor Details Page!</h1>
+
+
+
+
+<%= link_to "NEW MONITOR", new_mondetail_path, class: "btn btn-success" %> <br></br>
+
+<table id="t01">
+  <tr>
+    <th>NAME</th>
+    <th>TAG</th>
+    <th>SIZE</th>
+    <th>MOUSE</th>
+    <th>MOUSE TAG</th>
+    <th>KEYBOARD</th>
+    <th>KEYBOARD TAG</th>
+    <th>OS</th>
+    <th>MODIFY</th>
+    <th>DELETE</th>
+  </tr>
+  <% @monitors.each do |list| %>
+    <tr>
+      <td><%= list.monitor %></td> 
+       <td><%= list.monitor_tag %></td>
+       <td><%= list.monitor_size %></td>
+       <td><%= list.mouse %></td>
+       <td><%= list.mouse_tag %></td>
+       <td><%= list.keyboard %></td>
+       <td><%= list.keyboard_tag %></td>
+       <td><%= list.installed_os %></td>
+       <td><%= link_to "Edit", edit_mondetail_path(list) %></td>
+       <td><%= button_to "Delete", {:controller => "mondetails", :action => 'destroy', :id => list.id}, :confirm => "Are you sure you want to delete", :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>

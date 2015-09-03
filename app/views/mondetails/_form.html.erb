@@ -1,0 +1,34 @@
+<%= render 'shared/errors', obj: @monitor %>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+   <%= form_for @monitor do |f| %>
+          <%= f.label :monitor %>
+          <%= f.text_field :monitor %>
+         
+         <%= f.label :monitor_tag %>
+          <%= f.text_field :monitor_tag %>
+          
+          <%= f.label :monitor_size %>
+          <%= f.text_field :monitor_size %>
+          
+          <%= f.label :mouse %>
+          <%= f.text_field :mouse %>
+          
+          <%= f.label :mouse_tag %>
+          <%= f.text_field :mouse_tag %>
+          
+          <%= f.label :keyboard %>
+          <%= f.text_field :keyboard %>
+          
+          <%= f.label :keyboard_tag %>
+          <%= f.text_field :keyboard_tag %>
+          
+          <%= f.label :installed_os %>
+          <%= f.text_field :installed_os %>
+          
+          <%= f.submit(@monitor.new_record? ?  "Create Monitor" : "Edit Monitor", class: "btn btn-success") %>
+   
+   <% end %>
+   </div>
+</div>
