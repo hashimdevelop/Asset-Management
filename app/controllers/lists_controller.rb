@@ -6,13 +6,20 @@ class ListsController < ApplicationController
     
     def index
        
-        @listss = List.all
-         @lists = List.paginate(page: params[:page], per_page: 2)
+        #@listss = List.all
+         #@lists = List.paginate(page: params[:page], per_page: 2)
+         if params[:search]
+            @listss = List.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 2)
+         else
+            @listss = List.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+         end
+         
          respond_to do |format|
              format.html
              format.csv { send_data @lists.to_csv }
              format.xls # { send_data @lists.to_csv(col_sep: "\t") }
          end
+        
         
     end
     

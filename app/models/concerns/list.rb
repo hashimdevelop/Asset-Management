@@ -13,5 +13,9 @@ class List < ActiveRecord::Base
       end
     end
 
+    def self.search(query)
+        # where(:title, query) -> This would return an exact match of the query
+        where("name like ?", "%#{query}%") 
+    end
 
 end

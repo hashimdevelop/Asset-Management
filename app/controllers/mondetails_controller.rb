@@ -1,7 +1,12 @@
 class MondetailsController < ApplicationController
     
     def index
-       @monitors = Mondetail.all
+       
+       if params[:search]
+            @monitors = Mondetail.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 2)
+         else
+            @monitors = Mondetail.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+       end
     end
     
     def new

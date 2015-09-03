@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
-gem 'sunspot_rails'
+
 
 
 # Use ActiveModel has_secure_password
@@ -38,9 +38,7 @@ gem 'sunspot_rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development do
-    gem 'sunspot_solr'
-  end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

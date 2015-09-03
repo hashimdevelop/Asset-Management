@@ -1,10 +1,11 @@
 class MobiledevicesController < ApplicationController
     
     def index
-        @query = Mobiledevice.search do
-        fulltext params[:search]
-        end
-        @mobiledevices = @query.results
+         if params[:search]
+            @mobiledevices = Mobiledevice.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 2)
+         else
+            @mobiledevices = Mobiledevice.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+         end
         
     end
 
