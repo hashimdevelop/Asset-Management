@@ -1,0 +1,30 @@
+<%= render 'shared/errors', obj: @other %>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<%= form_for @other do |f| %>
+   <%= f.label :device_name %>
+   <%= f.text_field :device_name %>
+   
+   <%= f.label :model %>
+   <%= f.text_field :model %>
+   
+   <%= f.label :serial_no %>
+   <%= f.text_field :serial_no %>
+   
+   <%= f.label :asset_tag %>
+   <%= f.text_field :asset_tag %>
+   
+   <%= f.label :category %>
+   <%= f.text_field :category %>
+    
+    <%= f.label :used_by %>
+    <%= f.text_field :used_by %>
+    
+    <br></br>
+    
+    <%= f.submit(@other.new_record? ? "Create Extra Device" : "Edit Extra Device", class: "btn btn-success") %>
+    <% end %>
+    </div>
+</div>
+    

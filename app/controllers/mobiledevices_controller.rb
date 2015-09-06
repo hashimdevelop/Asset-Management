@@ -1,10 +1,11 @@
 class MobiledevicesController < ApplicationController
-    
+    before_filter :authenticate_user!
     def index
+        @mobiledevicess = Mobiledevice.all
          if params[:search]
-            @mobiledevices = Mobiledevice.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 2)
+            @mobiledevices = Mobiledevice.search(params[:search]).order("created_at DESC")
          else
-            @mobiledevices = Mobiledevice.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+            @mobiledevices = Mobiledevice.order("created_at DESC")
          end
         
     end

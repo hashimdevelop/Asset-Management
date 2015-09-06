@@ -1,0 +1,29 @@
+<%= render 'shared/errors', obj: @networkdetail %>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<%= form_for @networkdetail do |f| %>
+   <%= f.label :device_name %>
+   <%= f.text_field :device_name %>
+   
+   <%= f.label :model %>
+   <%= f.text_field :model %>
+   
+   <%= f.label :serial_no %>
+   <%= f.text_field :serial_no %>
+   
+   <%= f.label :asset_tag %>
+   <%= f.text_field :asset_tag %>
+    
+    <%= f.label :used_for %>
+    <%= f.text_field :used_for %>
+    
+     <%= f.label :port_no %>
+    <%= f.text_field :port_no %>
+    
+    <br></br>
+    
+    <%= f.submit(@networkdetail.new_record? ? "Create Network Details" : "Edit Network Details", class: "btn btn-success") %>
+    <% end %>
+    </div>
+</div>
+    

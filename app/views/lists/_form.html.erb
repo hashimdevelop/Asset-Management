@@ -1,8 +1,8 @@
-<%= render 'shared/errors', obj: @list %>
+<%= render 'shared/errors', obj: @serverdetail %>
 
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <%= form_for @list do |f| %>
+        <%= form_for @serverdetail do |f| %>
           <%= f.label :name %>
           <%= f.text_field :name %>
          
@@ -24,7 +24,7 @@
           <%= f.label :date_of_purchase %>
           <%= f.date_select :date_of_purchase, :order => [:day, :month, :year] %>
           
-          <%= f.submit(@list.new_record? ? "Create Asset" : "Edit Asset", class: "btn btn-success") %>
+          <%= f.submit(@serverdetail.new_record? ? "Create Asset" : "Edit Asset", class: "btn btn-success") %>
         <% end %>
     </div>
 </div>

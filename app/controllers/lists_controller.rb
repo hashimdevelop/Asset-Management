@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-    
+    before_filter :authenticate_user!
      def new
        @list = List.new 
      end
@@ -63,7 +63,10 @@ class ListsController < ApplicationController
      end
      
      def welcome
-         
+         if user_signed_in?
+              redirect_to laptopdetails_path
+         end
+
      end
      
     

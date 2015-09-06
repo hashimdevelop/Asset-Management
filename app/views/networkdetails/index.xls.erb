@@ -1,0 +1,36 @@
+
+
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">Device Name</Data></Cell>
+        <Cell><Data ss:Type="String"> MODEL </Data></Cell>
+        <Cell><Data ss:Type="String"> SERIAL NO</Data></Cell>
+        <Cell><Data ss:Type="String"> ASSET TAG</Data></Cell>
+        <Cell><Data ss:Type="String"> USER FOR</Data></Cell>
+        <Cell><Data ss:Type="String">PORT NO</Data></Cell>
+       
+    
+      </Row>
+    <% @networkdetailss.each do |list| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= list.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.device_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.model %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.serial_no %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.asset_tag %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.used_for %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.port_no %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

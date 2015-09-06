@@ -1,11 +1,11 @@
 class MondetailsController < ApplicationController
-    
+    before_filter :authenticate_user!
     def index
        
        if params[:search]
-            @monitors = Mondetail.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 2)
+            @monitors = Mondetail.search(params[:search]).order("created_at DESC")
          else
-            @monitors = Mondetail.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+            @monitors = Mondetail.order("created_at DESC")
        end
     end
     

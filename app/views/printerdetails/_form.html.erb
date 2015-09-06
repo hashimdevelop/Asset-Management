@@ -1,0 +1,27 @@
+<%= render 'shared/errors', obj: @printerdetail %>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<%= form_for @printerdetail do |f| %>
+   <%= f.label :device_name %>
+   <%= f.text_field :device_name %>
+   
+   <%= f.label :model %>
+   <%= f.text_field :model %>
+   
+   <%= f.label :serial_no %>
+   <%= f.text_field :serial_no %>
+   
+   <%= f.label :asset_tag %>
+   <%= f.text_field :asset_tag %>
+    
+    <%= f.label :used_by %>
+    <%= f.text_field :used_by %>
+    
+    <br></br>
+    
+    <%= f.submit(@printerdetail.new_record? ? "Create Printer Device" : "Edit Printer Device", class: "btn btn-success") %>
+    <% end %>
+    </div>
+</div>
+    

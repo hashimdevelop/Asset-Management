@@ -1,0 +1,34 @@
+<%= render 'shared/errors', obj: @tabletdetail %>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<%= form_for @tabletdetail do |f| %>
+   <%= f.label :device_name %>
+   <%= f.text_field :device_name %>
+   
+   <%= f.label :model %>
+   <%= f.text_field :model %>
+   
+   <%= f.label :serial_no %>
+   <%= f.text_field :serial_no %>
+   
+   <%= f.label :asset_tag %>
+   <%= f.text_field :asset_tag %>
+    
+    <%= f.label :warranty %>
+    <%= f.number_field :warranty %>
+    
+    <%= f.label :os %>
+    <%= f.text_field :os %>
+    
+    <%= f.label :used_by %>
+    <%= f.text_field :used_by %>
+    
+     <%= f.label :date_of_purchase %>
+    <%= f.date_select :date_of_purchase, :order => [:day, :month, :year], :start_year => 1940 %> 
+    <br></br>
+    
+    <%= f.submit(@tabletdetail.new_record? ? "Create Tablet Detail" : "Edit Tablet Detail", class: "btn btn-success") %>
+    <% end %>
+    </div>
+</div>
+    

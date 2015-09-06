@@ -1,0 +1,52 @@
+<%= render 'shared/errors', obj: @serverdetail %>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <%= form_for @serverdetail do |f| %>
+        
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+         
+           <%= f.label :model %> 
+          <%= f.text_field :model %>
+          
+          <%= f.label :serial_no %>
+          <%= f.text_field :serial_no %>
+          
+          <%= f.label :asset_tag %>
+          <%= f.text_field :asset_tag %>
+          
+          <%= f.label :monitor_model %>
+          <%= f.text_field :monitor_model %>
+          
+          
+          <%= f.label :monitor_tag %>
+          <%= f.text_field :monitor_tag %>
+          
+          <%= f.label :warranty %>
+          <%= f.number_field :warranty %>
+          
+           <%= f.label :mouse %>
+          <%= f.text_field :mouse %>
+          
+           <%= f.label :mouse_tag %>
+          <%= f.text_field :mouse_tag %>
+          
+          <%= f.label :keyboard %>
+          <%= f.text_field :keyboard %>
+          
+          <%= f.label :keyboard_tag %>
+          <%= f.text_field :keyboard_tag %>
+          
+         <%= f.label :installed_os %>
+          <%= f.text_field :installed_os %>
+         
+          <%= f.label :date_of_purchase %> 
+          <%= f.date_select :date_of_purchase, :order => [:day, :month, :year], :start_year => 1940 %><br></br>
+          
+          
+          <%= f.submit(@serverdetail.new_record? ? "Create Server detail" : "Edit Server Detail", class: "btn btn-success") %>
+        <% end %>
+       
+    </div>
+</div>

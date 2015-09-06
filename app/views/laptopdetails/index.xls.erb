@@ -1,0 +1,54 @@
+
+
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String"> MODEL </Data></Cell>
+        <Cell><Data ss:Type="String"> SERIAL NO</Data></Cell>
+        <Cell><Data ss:Type="String"> ASSET TAG</Data></Cell>
+        <Cell><Data ss:Type="String"> WARRANTY </Data></Cell>
+        <Cell><Data ss:Type="String"> DATA OF PURCHASE</Data></Cell>
+        <Cell><Data ss:Type="String"> monitor_Name </Data></Cell>
+        <Cell><Data ss:Type="String"> monitor_model </Data></Cell>
+        <Cell><Data ss:Type="String"> monitor_tag </Data></Cell>
+        <Cell><Data ss:Type="String"> monitor_size </Data></Cell>
+        <Cell><Data ss:Type="String"> mouse </Data></Cell>
+        <Cell><Data ss:Type="String"> mouse_tag </Data></Cell>
+        <Cell><Data ss:Type="String"> keyboard </Data></Cell>
+        <Cell><Data ss:Type="String"> keyboard_tag </Data></Cell>
+        <Cell><Data ss:Type="String"> installed_os </Data></Cell>
+    
+      </Row>
+    <% @laptopdetailss.each do |list| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= list.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.model %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.serial_no %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.asset_tag %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= list.warranty %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.date_of_purchase %></Data></Cell>
+         <Cell><Data ss:Type="String"><%= list.monitor_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.monitor_model %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.monitor_tag %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= list.monitor_size %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.mouse %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.mouse_tag %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.keyboard %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.keyboard_tag %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= list.installed_os %></Data></Cell>
+           
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

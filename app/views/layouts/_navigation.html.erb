@@ -1,14 +1,40 @@
 <header class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <%= link_to "Myassets", root_path, class:"btn btn-lg btn-success", id: "logo" %>
+        <%= link_to "Assets Management", root_path, class:"btn btn-lg btn-success", id: "logo" %>
         <div class="nav_item">
-            <%= link_to "ASSETS", lists_path, class: "btn btn-success" %>
+            <%= link_to "ASSETS", assetdetails_path, class: "btn btn-success" %>
             </div>
+            
             <div class="nav_item">
-            <%= link_to "MONITOR DETAILS", mondetails_path, class: "btn btn-success" %>
-            </div>
-            <div class="nav_item">
-            <%= link_to "MOBILE DEVICE DETAILS", mobiledevices_path, class: "btn btn-success" %>
+            <%= link_to "MOBILE DEVICE", mobiledevices_path, class: "btn btn-success" %>
+        </div>
+        
+         <div class="nav_item">
+            <%= link_to "LAPTOP DETAILS", laptopdetails_path, class: "btn btn-success" %>
+        </div>
+        
+        <div class="nav_item">
+            <%= link_to "TABLET DEVICE", tabletdetails_path, class: "btn btn-success" %>
+        </div>
+        
+         <div class="nav_item">
+            <%= link_to "SERVER DETAILS", serverdetails_path, class: "btn btn-success" %>
+        </div>
+        
+         <div class="nav_item">
+            <%= link_to "NETWORK DEVICES", networkdetails_path, class: "btn btn-success" %>
+        </div>
+        
+         <div class="nav_item">
+            <%= link_to "PRINTERS", printerdetails_path, class: "btn btn-success" %>
+        </div>
+        
+        <div class="nav_item">
+            <%= link_to "SCANNERS", scannerdetails_path, class: "btn btn-success" %>
+        </div>
+        
+        <div class="nav_item">
+            <%= link_to "OTHERS", others_path, class: "btn btn-success" %>
         </div>
     </div>
 </header>

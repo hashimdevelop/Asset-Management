@@ -24,7 +24,7 @@
     <%= f.text_field :used_by %>
     
      <%= f.label :date_of_purchase %>
-    <%= f.date_select :date_of_purchase, :order => [:day, :month, :year] %> 
+    <%= f.date_select :date_of_purchase, :order => [:day, :month, :year], :start_year => 1940 %> 
     <br></br>
     
     <%= f.submit(@mobiledevice.new_record? ? "Create Mobile Device" : "Edit Mobile Device", class: "btn btn-success") %>
