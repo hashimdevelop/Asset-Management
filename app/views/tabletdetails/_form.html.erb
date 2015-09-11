@@ -3,10 +3,12 @@
     <div class="col-md-8 col-md-offset-2">
 <%= form_for @tabletdetail do |f| %>
    <%= f.label :device_name %>
-   <%= f.text_field :device_name %>
+   <div class="wel">
+  <%= f.select :device_name, ['Apple iPad', 'Apple iPad 2', 'Micromax funbook', 'Sony', 'ASUS', 'SAMSUNG', 'Apple iPad 3', 'SAMSUNG', 'Apple iPad Air', 'Samsung  Galaxy', 'Apple iPad mini with 3G', 'Apple ipad mini without 3G', ] %>
+  </div>
    
-   <%= f.label :model %>
-   <%= f.text_field :model %>
+   <%= f.label :model %> 
+   <%= f.text_field :model%>
    
    <%= f.label :serial_no %>
    <%= f.text_field :serial_no %>

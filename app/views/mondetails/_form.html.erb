@@ -4,7 +4,9 @@
     <div class="col-md-8 col-md-offset-2">
    <%= form_for @monitor do |f| %>
           <%= f.label :monitor %>
-          <%= f.text_field :monitor %>
+          <div class="wel">
+          <%= f.select :model, ['SONY', 'HP', 'SAMSUNG', 'LENOVO', 'HTC'] %>
+          </div>
          
          <%= f.label :monitor_tag %>
           <%= f.text_field :monitor_tag %>
@@ -13,13 +15,17 @@
           <%= f.text_field :monitor_size %>
           
           <%= f.label :mouse %>
-          <%= f.text_field :mouse %>
+          <div class="wel">
+          <%= f.select :mouse, ['SONY', 'HP', 'SAMSUNG', 'LENOVO', 'HTC'] %>
+          </div>
           
           <%= f.label :mouse_tag %>
           <%= f.text_field :mouse_tag %>
           
           <%= f.label :keyboard %>
-          <%= f.text_field :keyboard %>
+          <div class="wel">
+          <%= f.select :keyboard, ['SONY', 'HP', 'SAMSUNG', 'LENOVO', 'HTC'] %>
+          </div>
           
           <%= f.label :keyboard_tag %>
           <%= f.text_field :keyboard_tag %>

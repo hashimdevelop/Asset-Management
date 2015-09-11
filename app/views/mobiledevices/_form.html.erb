@@ -3,10 +3,12 @@
     <div class="col-md-8 col-md-offset-2">
 <%= form_for @mobiledevice do |f| %>
    <%= f.label :device_name %>
-   <%= f.text_field :device_name %>
+   <div class="wel">
+  <%= f.select :device_name, ['HTC', 'SAMSUNG', 'NOKIA', 'iPhone 4', 'Sony Ericsson', 'iphone4s', 'iPhone 5', 'Black Berry', 'Samsung S4', 'I Phone 5S', 'Samsung Galaxy Young', 'LG Nexus 5', 'Nokia 2330 Black', 'LG Gx300', 'NOKIA 202', 'Nokia - X 101', 'Samsung I 9082', 'Samsung - Galaxy Core', ] %>
+  </div>
    
-   <%= f.label :model %>
-   <%= f.text_field :model %>
+   <%= f.label :model %> 
+   <%= f.text_field :model%>
    
    <%= f.label :serial_no %>
    <%= f.text_field :serial_no %>

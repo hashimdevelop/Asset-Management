@@ -55,7 +55,7 @@
        <td><%= link_to "Edit", edit_mobiledevice_path(list) %></td>
        <% end %>
        <% if can? :destroy, @mobiledevice %> 
-       <td><%= button_to "Delete", {:controller => "mobiledevices", :action => 'destroy', :id => list.id}, :confirm => "Are you sure you want to delete", :method => :delete %></td>
+       <td><%= button_to "Delete", {:controller => "mobiledevices", :action => 'destroy', :id => list.id}, data: { confirm => "Are you sure you want to delete" }, :method => :delete %></td>
        <% end %>
     </tr>
   <% end %>

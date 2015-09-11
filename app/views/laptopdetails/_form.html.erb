@@ -7,7 +7,9 @@
           <%= f.text_field :name %>
          
           <%= f.label :model %> 
-          <%= f.text_field :model %>
+          <div class="wel">
+          <%= f.select :model, ['DELL', 'HP', 'SAMSUNG', 'LENOVO', 'ACER'] %>
+          </div>
           
           <%= f.label :serial_no %>
           <%= f.text_field :serial_no %>
@@ -19,7 +21,9 @@
           <%= f.text_field :monitor_name %>
           
           <%= f.label :monitor_model %>
-          <%= f.text_field :monitor_model %>
+          <div class="wel">
+          <%= f.select :monitor_model, ['DELL', 'view sonic', 'SAMSUNG', 'LENOVO', 'BENQ'] %>
+          </div>
           
           <%= f.label :monitor_tag %>
           <%= f.text_field :monitor_tag %>
@@ -31,19 +35,25 @@
           <%= f.number_field :warranty %>
   
           <%= f.label :mouse %>
-          <%= f.text_field :mouse %>
+          <div class="wel">
+          <%= f.select :mouse, ['DELL', 'Logitech', 'LENOVO'] %>
+          </div>
           
           <%= f.label :mouse_tag %>
           <%= f.text_field :mouse_tag %>
         
           <%= f.label :keyboard %>
-          <%= f.text_field :keyboard %>
+          <div class="wel">
+          <%= f.select :keyboard, ['DELL', 'Logitech', 'HP', 'LENOVO', 'APPLE WIRELESS'] %>
+          </div>
           
           <%= f.label :keyboard_tag %>
           <%= f.text_field :keyboard_tag %>
           
           <%= f.label :installed_os %>
-          <%= f.text_field :installed_os %>
+          <div class="wel">
+          <%= f.select :installed_os, ['WINDOWS 7', 'WINDOWS 8', 'WINDOWS 8.1', 'WINDOWS 10', 'UBUNTU'] %>
+          </div>
 
           <%= f.label :date_of_purchase %>
           <%= f.date_select :date_of_purchase, :order => [:day, :month, :year], :start_year => 1940 %>

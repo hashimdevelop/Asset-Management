@@ -6,8 +6,10 @@
    <%= f.label :device_name %>
    <%= f.text_field :device_name %>
    
-   <%= f.label :model %>
-   <%= f.text_field :model %>
+   <%= f.label :model %> 
+   <div class="wel">
+    <%= f.select :model, ['DELL', 'HP', 'SAMSUNG'] %>
+    </div>
    
    <%= f.label :serial_no %>
    <%= f.text_field :serial_no %>
